@@ -548,6 +548,32 @@ footer span{color:var(--p);}
         <a href="https://github.com/sonalkajrrolkar1995/parabank-e2e-hybrid-framework" target="_blank" class="proj-link">View Repository -&gt;</a>
       </div>
 
+      <div class="proj-card">
+        <div class="proj-type">AI Chatbot Testing - Manual + Automation</div>
+        <h3 class="proj-title">AI Chatbot Quality Gate - Google Gemini</h3>
+        <p class="proj-desc">
+          Playwright UI test suite for the Google Gemini chatbot at gemini.google.com. Opens Chrome, logs into Gemini with a Google account, types prompts into the chat interface, and validates responses on screen across 10 quality layers. Combines manual and automated testing under one structured framework.
+        </p>
+        <ul class="proj-feats">
+          <li>Tests run through the browser - not the API - catching UI failures API tests miss</li>
+          <li>10 quality layers: functional, accuracy, hallucination detection, safety, consistency, performance, format validation, security, bias and fairness, monitoring</li>
+          <li>35 manual test cases documented in Excel with test plan, bug report, and results summary</li>
+          <li>3 bugs found during testing: hallucination (Critical), safety partial failure (High), performance SLA breach (Medium)</li>
+          <li>Page Object Model - one file to update if Gemini changes its UI</li>
+          <li>Global auth setup using Playwright storageState - login once, all tests reuse session</li>
+          <li>GitHub Actions CI/CD pipeline included</li>
+        </ul>
+        <div class="proj-tags">
+          <span class="proj-tag">Playwright</span>
+          <span class="proj-tag">JavaScript</span>
+          <span class="proj-tag">AI Testing</span>
+          <span class="proj-tag">Manual Testing</span>
+          <span class="proj-tag">Page Object Model</span>
+          <span class="proj-tag">GitHub Actions</span>
+        </div>
+        <a href="https://github.com/sonalkajrrolkar1995/ai-chatbot-quality-gate" target="_blank" class="proj-link">View Repository -&gt;</a>
+      </div>
+
     </div>
   </div>
 </section>
