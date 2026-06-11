@@ -80,7 +80,7 @@ section{padding:86px 5%;}
 .section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(0,168,255,.3),transparent);}
 .section-sub{color:var(--muted);font-size:.84rem;margin-bottom:44px;}
 
-/* RECOMMENDATIONS */
+/* RECOMMENDATIONS (NEW SECTION ONLY - everything else preserved) */
 #recommendations{background:var(--bg2);}
 .rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:18px;}
 .rec-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:22px;transition:all .3s;display:flex;flex-direction:column;position:relative;}
@@ -99,7 +99,7 @@ section{padding:86px 5%;}
 @media(max-width:768px){.rec-grid{grid-template-columns:1fr;}}
 
 /* ABOUT */
-#about{background:var(--bg);}
+#about{background:var(--bg2);}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;}
 .about-text p{color:var(--text);line-height:1.8;margin-bottom:14px;font-size:.92rem;}
 .about-text p:last-child{margin-bottom:0;}
@@ -113,7 +113,7 @@ section{padding:86px 5%;}
 @media(max-width:768px){.about-grid{grid-template-columns:1fr;}}
 
 /* SKILLS */
-#skills{background:var(--bg2);}
+#skills{background:var(--bg);}
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
 .skill-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px;transition:all .3s;}
 .skill-card:hover{border-color:rgba(0,168,255,.35);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.4);}
@@ -123,7 +123,7 @@ section{padding:86px 5%;}
 .pill:hover{border-color:rgba(0,168,255,.4);color:var(--p);}
 
 /* EXPERIENCE */
-#experience{background:var(--bg);}
+#experience{background:var(--bg2);}
 .timeline{position:relative;padding-left:24px;}
 .timeline::before{content:'';position:absolute;left:5px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--p),rgba(0,168,255,.04));}
 .exp-item{position:relative;margin-bottom:38px;}
@@ -139,7 +139,7 @@ section{padding:86px 5%;}
 .exp-result{display:block;margin-top:11px;font-size:.77rem;background:rgba(0,168,255,.07);border:1px solid rgba(0,168,255,.2);color:var(--p);padding:6px 12px;border-radius:4px;line-height:1.6;font-weight:500;}
 
 /* PROJECTS */
-#projects{background:var(--bg2);}
+#projects{background:var(--bg);}
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px;}
 .proj-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:24px;display:flex;flex-direction:column;transition:all .3s;}
 .proj-card:hover{border-color:rgba(0,168,255,.4);transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.5);}
@@ -155,7 +155,7 @@ section{padding:86px 5%;}
 .proj-link:hover{color:#22b8ff;}
 
 /* CERTIFICATIONS */
-#certifications{background:var(--bg);}
+#certifications{background:var(--bg2);}
 .certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:13px;}
 .cert-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 14px;text-align:center;transition:all .3s;text-decoration:none;display:block;}
 .cert-card:hover{border-color:rgba(0,168,255,.4);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.4);}
@@ -164,7 +164,7 @@ section{padding:86px 5%;}
 .cert-org{font-size:.7rem;color:var(--muted);}
 
 /* CONTACT */
-#contact{background:var(--bg2);}
+#contact{background:var(--bg);}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:start;}
 .contact-info h3{font-size:1.25rem;font-weight:700;color:var(--white);margin-bottom:11px;}
 .contact-info p{color:var(--muted);font-size:.88rem;line-height:1.8;margin-bottom:20px;}
@@ -180,7 +180,7 @@ section{padding:86px 5%;}
 .fg textarea{min-height:95px;}
 @media(max-width:768px){.contact-grid{grid-template-columns:1fr;}}
 
-footer{background:var(--bg);border-top:1px solid var(--border);padding:22px 5%;text-align:center;}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:22px 5%;text-align:center;}
 footer p{font-size:.78rem;color:var(--muted);}
 footer span{color:var(--p);}
 
@@ -200,7 +200,6 @@ footer span{color:var(--p);}
     <ul class="nav-links" id="navLinks">
       <li><a href="#hero">Home</a></li>
       <li><a href="#recommendations">Recommendations</a></li>
-      <li><a href="https://github.com/sonalkajrrolkar1995" target="_blank" rel="noopener">GitHub</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -215,6 +214,7 @@ footer span{color:var(--p);}
 <section id="hero">
   <div class="hero-inner">
     <div>
+      <!-- Relocation reason - stated once, prominently -->
       <div class="hero-relocation">
         <strong>Relocated to Berlin - September 2025 | Open to QA roles</strong>
       </div>
@@ -551,6 +551,7 @@ She has helped so many people on linked for job hunting process.</div>
     <p class="section-sub">Consistent delivery across regulated and complex product environments</p>
     <div class="timeline reveal">
 
+      <!-- Berlin -->
       <div class="exp-item">
         <div class="exp-dot"></div>
         <div class="exp-role">Professional Development - Berlin</div>
@@ -567,6 +568,7 @@ She has helped so many people on linked for job hunting process.</div>
         </div>
       </div>
 
+      <!-- Expleo -->
       <div class="exp-item">
         <div class="exp-dot"></div>
         <div class="exp-role">QA Engineer</div>
@@ -584,6 +586,7 @@ She has helped so many people on linked for job hunting process.</div>
         </div>
       </div>
 
+      <!-- Datamatics -->
       <div class="exp-item">
         <div class="exp-dot"></div>
         <div class="exp-role">Software QA Engineer</div>
@@ -852,4 +855,4 @@ window.addEventListener('scroll', () => {
   sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
   navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
 }, { passive: true });
-const obs = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) x.target.classList.add('visible'); }), { threshol
+const obs = new IntersectionObserver(e => e.forEach(x => {
