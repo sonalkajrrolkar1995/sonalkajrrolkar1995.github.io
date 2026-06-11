@@ -80,8 +80,26 @@ section{padding:86px 5%;}
 .section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(0,168,255,.3),transparent);}
 .section-sub{color:var(--muted);font-size:.84rem;margin-bottom:44px;}
 
+/* RECOMMENDATIONS */
+#recommendations{background:var(--bg2);}
+.rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:18px;}
+.rec-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:22px;transition:all .3s;display:flex;flex-direction:column;position:relative;}
+.rec-card:hover{border-color:rgba(0,168,255,.4);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.4);}
+.rec-card::before{content:'\201C';position:absolute;top:8px;right:18px;font-size:3rem;color:var(--p);opacity:.18;font-family:Georgia,serif;line-height:1;}
+.rec-head{padding-bottom:12px;margin-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:12px;}
+.rec-avatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--p),var(--p2));color:#001a2e;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.92rem;letter-spacing:.02em;flex-shrink:0;border:2px solid rgba(0,168,255,.3);box-shadow:0 0 12px rgba(0,168,255,.25);font-family:'Inter',sans-serif;}
+.rec-head-text{flex:1;min-width:0;}
+.rec-name{font-size:.95rem;font-weight:700;color:var(--white);}
+.rec-title{font-size:.76rem;color:var(--p);margin-top:3px;line-height:1.4;font-weight:500;}
+.rec-meta{font-size:.7rem;color:var(--muted);margin-top:5px;font-style:italic;letter-spacing:.02em;}
+.rec-text{font-size:.83rem;color:var(--text);line-height:1.75;white-space:pre-line;}
+.rec-cta{text-align:center;margin-top:30px;}
+.rec-cta a{color:var(--p);text-decoration:none;font-size:.82rem;font-weight:600;border:1.5px solid var(--p);padding:9px 22px;border-radius:6px;display:inline-flex;align-items:center;gap:7px;transition:all .25s;}
+.rec-cta a:hover{background:rgba(0,168,255,.08);transform:translateY(-2px);}
+@media(max-width:768px){.rec-grid{grid-template-columns:1fr;}}
+
 /* ABOUT */
-#about{background:var(--bg2);}
+#about{background:var(--bg);}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;}
 .about-text p{color:var(--text);line-height:1.8;margin-bottom:14px;font-size:.92rem;}
 .about-text p:last-child{margin-bottom:0;}
@@ -95,7 +113,7 @@ section{padding:86px 5%;}
 @media(max-width:768px){.about-grid{grid-template-columns:1fr;}}
 
 /* SKILLS */
-#skills{background:var(--bg);}
+#skills{background:var(--bg2);}
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
 .skill-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px;transition:all .3s;}
 .skill-card:hover{border-color:rgba(0,168,255,.35);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.4);}
@@ -105,7 +123,7 @@ section{padding:86px 5%;}
 .pill:hover{border-color:rgba(0,168,255,.4);color:var(--p);}
 
 /* EXPERIENCE */
-#experience{background:var(--bg2);}
+#experience{background:var(--bg);}
 .timeline{position:relative;padding-left:24px;}
 .timeline::before{content:'';position:absolute;left:5px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--p),rgba(0,168,255,.04));}
 .exp-item{position:relative;margin-bottom:38px;}
@@ -117,11 +135,11 @@ section{padding:86px 5%;}
 .exp-body{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px 18px;margin-top:10px;}
 .exp-body ul{list-style:none;padding:0;}
 .exp-body li{font-size:.84rem;color:var(--text);padding:4px 0 4px 15px;position:relative;line-height:1.65;}
-.exp-body li::before{content:'▸';position:absolute;left:0;color:var(--p);}
+.exp-body li::before{content:'\25B8';position:absolute;left:0;color:var(--p);}
 .exp-result{display:block;margin-top:11px;font-size:.77rem;background:rgba(0,168,255,.07);border:1px solid rgba(0,168,255,.2);color:var(--p);padding:6px 12px;border-radius:4px;line-height:1.6;font-weight:500;}
 
 /* PROJECTS */
-#projects{background:var(--bg);}
+#projects{background:var(--bg2);}
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px;}
 .proj-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:24px;display:flex;flex-direction:column;transition:all .3s;}
 .proj-card:hover{border-color:rgba(0,168,255,.4);transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.5);}
@@ -130,14 +148,14 @@ section{padding:86px 5%;}
 .proj-desc{font-size:.83rem;color:var(--muted);line-height:1.7;margin-bottom:14px;}
 .proj-feats{list-style:none;padding:0;margin-bottom:15px;}
 .proj-feats li{font-size:.8rem;color:var(--text);padding:3px 0 3px 15px;position:relative;line-height:1.6;}
-.proj-feats li::before{content:'▸';position:absolute;left:0;color:var(--p);}
+.proj-feats li::before{content:'\25B8';position:absolute;left:0;color:var(--p);}
 .proj-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px;}
 .proj-tag{font-size:.7rem;padding:3px 9px;background:rgba(0,168,255,.06);border:1px solid rgba(0,168,255,.14);border-radius:4px;color:var(--muted);}
 .proj-link{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;color:var(--p);text-decoration:none;font-weight:600;margin-top:auto;transition:color .2s;}
 .proj-link:hover{color:#22b8ff;}
 
 /* CERTIFICATIONS */
-#certifications{background:var(--bg2);}
+#certifications{background:var(--bg);}
 .certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:13px;}
 .cert-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 14px;text-align:center;transition:all .3s;text-decoration:none;display:block;}
 .cert-card:hover{border-color:rgba(0,168,255,.4);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.4);}
@@ -146,7 +164,7 @@ section{padding:86px 5%;}
 .cert-org{font-size:.7rem;color:var(--muted);}
 
 /* CONTACT */
-#contact{background:var(--bg);}
+#contact{background:var(--bg2);}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:start;}
 .contact-info h3{font-size:1.25rem;font-weight:700;color:var(--white);margin-bottom:11px;}
 .contact-info p{color:var(--muted);font-size:.88rem;line-height:1.8;margin-bottom:20px;}
@@ -162,7 +180,7 @@ section{padding:86px 5%;}
 .fg textarea{min-height:95px;}
 @media(max-width:768px){.contact-grid{grid-template-columns:1fr;}}
 
-footer{background:var(--bg2);border-top:1px solid var(--border);padding:22px 5%;text-align:center;}
+footer{background:var(--bg);border-top:1px solid var(--border);padding:22px 5%;text-align:center;}
 footer p{font-size:.78rem;color:var(--muted);}
 footer span{color:var(--p);}
 
@@ -181,6 +199,8 @@ footer span{color:var(--p);}
     </button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#hero">Home</a></li>
+      <li><a href="#recommendations">Recommendations</a></li>
+      <li><a href="https://github.com/sonalkajrrolkar1995" target="_blank" rel="noopener">GitHub</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -195,7 +215,6 @@ footer span{color:var(--p);}
 <section id="hero">
   <div class="hero-inner">
     <div>
-      <!-- Relocation reason - stated once, prominently -->
       <div class="hero-relocation">
         <strong>Relocated to Berlin - September 2025 | Open to QA roles</strong>
       </div>
@@ -217,6 +236,173 @@ footer span{color:var(--p);}
       </div>
     </div>
     <img src="sonal-photo.jpg" alt="Sonal Kajrolkar" class="hero-photo"/>
+  </div>
+</section>
+
+<!-- RECOMMENDATIONS (NEW - 12 verbatim LinkedIn endorsements) -->
+<section id="recommendations">
+  <div class="section-inner">
+    <h2 class="section-title">Recommendations</h2>
+    <p class="section-sub">12 endorsements from colleagues, managers, and clients on LinkedIn</p>
+    <div class="rec-grid reveal">
+
+      <div class="rec-card">
+        <div class="rec-head">
+          <div class="rec-avatar">KT</div>
+          <div class="rec-head-text">
+            <div class="rec-name">Kyle Taylor</div>
+            <div class="rec-title">OutSystems Developer | Version 1</div>
+            <div class="rec-meta">August 9, 2025 &middot; Worked with Sonal on the same team</div>
+          </div>
+        </div>
+        <div class="rec-text">I had the pleasure of working with Sonal on a delivery project for the NI Department for the Economy. I found her to be professional, hardworking and very knowledgeable in her area of expertise.</div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head">
+          <div class="rec-avatar">CC</div>
+          <div class="rec-head-text">
+            <div class="rec-name">Conor Cadden</div>
+            <div class="rec-title">OutSystems Developer</div>
+            <div class="rec-meta">August 9, 2025 &middot; Worked with Sonal on the same team</div>
+          </div>
+        </div>
+        <div class="rec-text">I had the pleasure of working with Sonal on a high-impact project for the Department for the Economy, where we added two new programmes to a system that tracks trainees, alongside broader system improvements. The timeline was tight, and the system itself was complex&mdash;but Sonal rose to the challenge with remarkable focus and adaptability.
+
+As the sole QA on our project, Sonal quickly got to grips with the intricacies of the platform and demonstrated a sharp ability to prioritize the most impactful stories. Her attention to detail, proactive communication, and commitment to quality played a key role in keeping the project on track and ensuring a smooth delivery.
+
+Sonal&rsquo;s work ethic and collaborative spirit made her an invaluable part of the team. I&rsquo;d highly recommend her to any team looking for a driven QA professional.</div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head">
+          <div class="rec-avatar">CA</div>
+          <div class="rec-head-text">
+            <div class="rec-name">Chris Allen</div>
+            <div class="rec-title">Senior Software Engineer - OutSystems</div>
+            <div class="rec-meta">August 4, 2025 &middot; Worked with Sonal on the same team</div>
+          </div>
+        </div>
+        <div class="rec-text">Sonal is an exceptional QA professional who combines a sharp eye for detail with an impressive ability to learn quickly. Her thorough approach to testing consistently ensures high-quality software. Sonal would be an asset to any team, and I&rsquo;ve genuinely enjoyed working alongside her.</div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head">
+          <div class="rec-avatar">RM</div>
+          <div class="rec-head-text">
+            <div class="rec-name">Roland McIntyre</div>
+            <div class="rec-title">QA Manager at Expleo</div>
+            <div class="rec-meta">May 21, 2025 &middot; Managed Sonal directly</div>
+          </div>
+        </div>
+        <div class="rec-text">Sonal is a proactive, personable and engaged team member who navigated a challenging project context with aplomb. She picks up project and business concepts quickly, and I received good feedback in terms of her value add to project activities. She is highly inquisitive, curious, and asks relevant and incisive questions, and uses this information to provide high quality test collateral. While the project scope did not extend to test automation activities, Sonal demonstrates a keen interest in pushing her technical prowess further in this area and to build on her existing automation skills.</div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head">
+          <div class="rec-avatar">SG</div>
+          <div class="rec-head-text">
+            <div class="rec-name">Sujana G</div>
+            <div class="rec-title">Sr Software QA Consultant</div>
+            <div class="rec-meta">February 19, 2025 &middot; Senior to Sonal but didn&rsquo;t manage Sonal directly</div>
+          </div>
+        </div>
+        <div class="rec-text">Sonal is working as a test analyst in my team for one of my client projects and Sonal consistently demonstrated a keen eye for detail and had a good understanding of software testing principles.
+
+Sonal is a reliable and proactive team player, always willing to collaborate and share insights. She approach challenges with a positive attitude and work diligently to meet deadlines, even under pressure. I have no doubt that Sonal will continue to thrive in her career and be a valuable asset to any team she joins. I highly recommend her for any future roles in testing.</div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head">
+          <div class="rec-avatar">YM</div>
+          <div class="rec-head-text">
+            <div class="rec-name">Yashaswini D.Muddu</div>
+            <div class="rec-title">Test/QA Lead | Test Management | Requirement Analysis | Test Estimation | STLC | SDLC | Defect Management | Finance &amp; Banking App Testing</div>
+            <div class="rec-meta">January 24, 2024 &middot; Managed Sonal directly</div>
+          </div>
+        </div>
+        <div class="rec-text">Sonal worked with me in my team, she is a detail &amp; quality oriented personnel.
+Smart worker and was always proactive in her tasks. I would strongly recommend Sonal for any QA Job and would love to work with her again if our paths cross.</div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head">
+          <div class="rec-avatar">TK</div>
+          <div class="rec-head-text">
+            <div class="rec-name">Tilak Kandukuru</div>
+            <div class="rec-title">Senior Test Analyst at Zurich Insurance Company Ltd</div>
+            <div class="rec-meta">January 11, 2024 &middot; Managed Sonal directly</div>
+          </div>
+        </div>
+        <div class="rec-text">I had the pleasure of collaborating with Sonal Kajrolkar on a project. Her strong teamwork and collaboration skills helped foster a positive and productive working environment, leading to successful project outcomes</div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head">
+          <div class="rec-avatar">NS</div>
+          <div class="rec-head-text">
+            <div class="rec-name">Nikhil Saraswat</div>
+            <div class="rec-title">Big Data Engineer | Python | SQL | PySpark | Machine Learning</div>
+            <div class="rec-meta">June 28, 2022 &middot; Nikhil was Sonal&rsquo;s client</div>
+          </div>
+        </div>
+        <div class="rec-text">She is a good communicator, and loves his work.</div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head">
+          <div class="rec-avatar">VP</div>
+          <div class="rec-head-text">
+            <div class="rec-name">Vivek Patil</div>
+            <div class="rec-title">Tester | The Test Tribe Champion | ISTQB Agile &amp; TAE certified | Software Testing | Test Automation</div>
+            <div class="rec-meta">June 28, 2022 &middot; Vivek was Sonal&rsquo;s client</div>
+          </div>
+        </div>
+        <div class="rec-text">&ldquo;Sonal is an excellent mentor.&rdquo; She helped guide me through tough career decisions. She always has the eagerness to learn new things, helping others to reach appropriate conclusions. Sonal always supports others and shared her experience in this field through her posts.</div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head">
+          <div class="rec-avatar">RP</div>
+          <div class="rec-head-text">
+            <div class="rec-name">Roshni Patel</div>
+            <div class="rec-title">QA Tester</div>
+            <div class="rec-meta">June 28, 2022 &middot; Roshni was Sonal&rsquo;s client</div>
+          </div>
+        </div>
+        <div class="rec-text">I attended her ATS friendly resume writing session and it was very informative and helpful. she answered everyone&rsquo;s questions very patiently and appropriately.</div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head">
+          <div class="rec-avatar">VG</div>
+          <div class="rec-head-text">
+            <div class="rec-name">Vishal Gupta</div>
+            <div class="rec-title">Java Developer for FNB</div>
+            <div class="rec-meta">June 28, 2022 &middot; Sonal was Vishal&rsquo;s client</div>
+          </div>
+        </div>
+        <div class="rec-text">Only one word comes to mind when I think of sonal kajrolkar and that&rsquo;s AWESOME</div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head">
+          <div class="rec-avatar">PT</div>
+          <div class="rec-head-text">
+            <div class="rec-name">Pratik Tak</div>
+            <div class="rec-title">Investment Analyst at HSBC Asset Management</div>
+            <div class="rec-meta">June 28, 2022 &middot; Pratik was Sonal&rsquo;s mentor</div>
+          </div>
+        </div>
+        <div class="rec-text">Sonal is a multi talented, hardworking, diligent and a really friendly person. Her work is her passion and she makes sure that everyone does justice to that. Not only as a QA, but also as a great Linked in Motivator, she ensures good quality and timely delivery of the products. While managing multiple projects at the same time, she still pays a close attention to detail to each one of them not compromising the quality of the products in tight deadlines. She works efficiently as a team member and content creator and also has the ability to scour hidden talent in people.
+
+She has helped so many people on linked for job hunting process.</div>
+      </div>
+
+    </div>
+    <div class="rec-cta">
+      <a href="https://www.linkedin.com/in/sonalkajrolkar/details/recommendations/" target="_blank" rel="noopener">View all recommendations on LinkedIn &rarr;</a>
+    </div>
   </div>
 </section>
 
@@ -365,7 +551,6 @@ footer span{color:var(--p);}
     <p class="section-sub">Consistent delivery across regulated and complex product environments</p>
     <div class="timeline reveal">
 
-      <!-- Berlin -->
       <div class="exp-item">
         <div class="exp-dot"></div>
         <div class="exp-role">Professional Development - Berlin</div>
@@ -382,7 +567,6 @@ footer span{color:var(--p);}
         </div>
       </div>
 
-      <!-- Expleo -->
       <div class="exp-item">
         <div class="exp-dot"></div>
         <div class="exp-role">QA Engineer</div>
@@ -400,7 +584,6 @@ footer span{color:var(--p);}
         </div>
       </div>
 
-      <!-- Datamatics -->
       <div class="exp-item">
         <div class="exp-dot"></div>
         <div class="exp-role">Software QA Engineer</div>
@@ -585,27 +768,27 @@ footer span{color:var(--p);}
     <p class="section-sub">Industry-recognised credentials - verified on LinkedIn</p>
     <div class="certs-grid reveal">
       <a href="https://www.linkedin.com/in/sonalkajrolkar/" target="_blank" class="cert-card">
-        <div class="cert-icon">🏆</div>
+        <div class="cert-icon">&#127942;</div>
         <div class="cert-name">ISTQB Foundation Level 4.0</div>
         <div class="cert-org">ISTQB - International</div>
       </a>
       <a href="https://www.linkedin.com/in/sonalkajrolkar/" target="_blank" class="cert-card">
-        <div class="cert-icon">🎭</div>
+        <div class="cert-icon">&#127917;</div>
         <div class="cert-name">Playwright End-to-End Testing</div>
         <div class="cert-org">LinkedIn Learning</div>
       </a>
       <a href="https://www.linkedin.com/in/sonalkajrolkar/" target="_blank" class="cert-card">
-        <div class="cert-icon">⚡</div>
+        <div class="cert-icon">&#9889;</div>
         <div class="cert-name">Cypress.io Test Automation</div>
         <div class="cert-org">LinkedIn Learning</div>
       </a>
       <a href="https://www.linkedin.com/in/sonalkajrolkar/" target="_blank" class="cert-card">
-        <div class="cert-icon">📮</div>
+        <div class="cert-icon">&#128238;</div>
         <div class="cert-name">API Validation with Postman</div>
         <div class="cert-org">LinkedIn Learning</div>
       </a>
       <a href="https://www.linkedin.com/in/sonalkajrolkar/" target="_blank" class="cert-card">
-        <div class="cert-icon">🗄️</div>
+        <div class="cert-icon">&#128451;&#65039;</div>
         <div class="cert-name">SQL for Testers - Oracle SQL</div>
         <div class="cert-org">Oracle / LinkedIn Learning</div>
       </a>
@@ -669,8 +852,4 @@ window.addEventListener('scroll', () => {
   sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
   navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
 }, { passive: true });
-const obs = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) x.target.classList.add('visible'); }), { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script>
-</body>
-</html>
+const obs = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) x.target.classList.add('visible'); }), { threshol
