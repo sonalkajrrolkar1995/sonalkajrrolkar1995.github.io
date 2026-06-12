@@ -184,7 +184,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:22px 5%;
 footer p{font-size:.78rem;color:var(--muted);}
 footer span{color:var(--p);}
 
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease;}
+.reveal{opacity:1;transform:none;transition:opacity .55s ease,transform .55s ease;}
 .reveal.visible{opacity:1;transform:none;}
 </style>
 </head>
@@ -855,4 +855,8 @@ window.addEventListener('scroll', () => {
   sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
   navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
 }, { passive: true });
-const obs = new IntersectionObserver(e => e.forEach(x => {
+const obs = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) x.target.classList.add('visible'); }), { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
